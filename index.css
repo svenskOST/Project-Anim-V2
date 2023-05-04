@@ -1,0 +1,48 @@
+:root {
+    --base-color: #212121;
+    --main-color: #3a3a3a;
+    --shadow-color: black;
+}
+
+* {
+    margin: 0;
+    transition: background-color 1s, box-shadow 1s;
+}
+
+body {
+    background-color: var(--base-color);
+    min-height: 100vh;
+}
+
+#modeToggle {
+    background-color: var(--main-color);
+    box-shadow: 0px 5px 5px var(--shadow-color);
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    border-radius: 50px;
+    left: 100px;
+    position: absolute;
+}
+
+#modeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    border-radius: 20px;
+    top: 21%;
+    height: 58%;
+    aspect-ratio: 1/1;
+    background-color: var(--main-color);
+    box-shadow: none;
+    transition: left 0.5s ease-in-out, background-color 0.5s, box-shadow 0.5s;
+}
+
+#moon {
+    width: 100%;
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+}
