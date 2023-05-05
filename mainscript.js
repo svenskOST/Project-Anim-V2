@@ -1,3 +1,13 @@
+//Menu interactions
+var menu = document.getElementById("menu")
+
+menu.addEventListener("mouseenter", function () {
+    menu.style.left = "4vw"
+})
+menu.addEventListener("mouseleave", function () {
+    menu.style.left = "-25px"
+})
+
 // Darkmode toggle
 var root = document.querySelector(":root")
 var mode = document.getElementById("modeToggle")
@@ -7,13 +17,12 @@ var isDark = true
 
 var baseDark = "#212121"
 var mainDark = "#3a3a3a"
-var baseLight = "#f5f5f9"
-var mainLight = "#d4d4dd"
-var shadowLight = "grey"
-var shadowDark = "black"
+var shadowDark = "rgba(0, 0, 0, 0.5)"
+var baseLight = "#d0d0dc"
+var mainLight = "#b0b0bb"
+var shadowLight = "rgba(118, 118, 118, 0.7)"
 
 mode.addEventListener("click", function () {
-
     if (isDark) {
         root.style.setProperty("--base-color", baseLight)
         root.style.setProperty("--main-color", mainLight)

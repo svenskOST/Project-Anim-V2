@@ -10,7 +10,7 @@
 :root {
     --base-color: #212121;
     --main-color: #3a3a3a;
-    --shadow-color: black;
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 * {
