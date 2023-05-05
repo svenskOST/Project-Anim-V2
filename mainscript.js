@@ -7,7 +7,7 @@ var isDark = true
 
 var baseDark = "#212121"
 var mainDark = "#3a3a3a"
-var baseLight = "#f2f2f7"
+var baseLight = "#f5f5f9"
 var mainLight = "#d4d4dd"
 var shadowLight = "grey"
 var shadowDark = "black"
