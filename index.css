@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius: 15px;
+}
+
 :root {
     --base-color: #212121;
     --main-color: #3a3a3a;
@@ -10,26 +19,53 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--base-color);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #logo {
-    width: 750px;
+    width: 100%;
     height: 120px;
+    max-height: 120px;
+    max-width: 750px;
     position: absolute;
 }
 
 #logoOuter {
     position: absolute;
     display: block;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 1s;
+    width: 100%;
 }
 
 #logoInner {
+    width: 100%;
     position: absolute;
     fill: url(#MyGradient);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+}
+
+#fadeEffect {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: var(--base-color);
+    animation: none;
+    display: block;
+    box-shadow: -20px 0px 20px 5px var(--base-color);
+    border-radius: 40px;
+}
+
+@keyframes logoFade {
+    0% {left: -5%; width: 110%;}
+    100% {left: 110%; width: 0%;}
 }
 
 #modeToggle {
@@ -55,7 +91,7 @@ body {
     height: 58%;
     aspect-ratio: 1/1;
     background-color: var(--main-color);
-    box-shadow: none;
+    box-shadow: 0 0 10px grey;
     transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.5s, box-shadow 0.5s;
 }
 

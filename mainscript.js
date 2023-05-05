@@ -1,11 +1,19 @@
 // Logo animation
+var logoOuter = document.getElementById("logoOuter")
 var logoInner = document.getElementById("logoInner")
+var fadeEffect = document.getElementById("fadeEffect")
 setTimeout(function () {
-    logoInner.style.opacity = 1
+    fadeEffect.style.animation = "logoFade 3s ease-out"
     setTimeout(function () {
-        logoOuter.style.display = "none"
-    }, 1000)
-}, 5000)
+        fadeEffect.style.display = "none"
+    }, 3000)
+    setTimeout(function () {
+        logoOuter.style.opacity = 0
+        setTimeout(function () {
+            logoOuter.style.display = "none"
+        }, 1000)
+    }, 2000)
+}, 2000)
 
 // Darkmode toggle
 var root = document.querySelector(":root")
