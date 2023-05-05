@@ -1,3 +1,13 @@
+// Logo animation
+var logoInner = document.getElementById("logoInner")
+setTimeout(function () {
+    logoInner.style.opacity = 1
+    setTimeout(function () {
+        logoOuter.style.display = "none"
+    }, 1000)
+}, 5000)
+
+// Darkmode toggle
 var root = document.querySelector(":root")
 var mode = document.getElementById("modeToggle")
 var icon = document.getElementById("modeIcon")
@@ -12,6 +22,7 @@ var shadowLight = "grey"
 var shadowDark = "black"
 
 mode.addEventListener("click", function () {
+
     if (isDark) {
         root.style.setProperty("--base-color", baseLight)
         root.style.setProperty("--main-color", mainLight)
