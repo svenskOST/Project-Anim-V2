@@ -121,3 +121,15 @@ body {
     opacity: 1;
     transition: opacity 1s;
 }
+
+#categories {
+    width: 200px;
+    height: 200px;
+    background: red;
+}
+
+.category {
+    width: 50px;
+    height: 50px;
+    background: green;
+}
