@@ -31,6 +31,17 @@ body {
     position: absolute;
 }
 
+#menuBox {
+    position: fixed;
+    border-radius: 30px;
+    width: 24vw;
+    max-width: 150px;
+    aspect-ratio: 1/1.2;
+    top: calc(50vh - 85px);
+    left: -35px;
+    z-index: 2;
+}
+
 #menu {
     position: fixed;
     background: purple;
@@ -44,7 +55,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 1s;
+    transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 1s, transform 0.5s, padding 0.5s;
+    z-index: 3;
+    transform: translateY(0);
 }
 
 #menuIcon {
@@ -107,7 +120,7 @@ body {
     position: absolute;
     left: 10vw;
     width: 80vw;
-    top: 200px;
+    top: 170px;
 }
 
 .anim {
@@ -127,8 +140,8 @@ body {
 
     @media only screen and (max-width: 720px) {
         #logo {
-            width: 90%;
-            left: 5%;
+            width: 70%;
+            left: 15%;
         }
     }
 }

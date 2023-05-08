@@ -1,11 +1,19 @@
 //Menu interactions
+var menuBox = document.getElementById("menuBox")
 var menu = document.getElementById("menu")
 
 menu.addEventListener("mouseenter", function () {
-    menu.style.left = "4vw"
+    menu.style.left = "2vw"
+    menu.style.transform = "translateY(-150px)"
+    menu.style.padding = "150px 0 150px 0"
+    menuBox.style.aspectRatio = "1/3.5"
+    menuBox.style.top = "14vh"
 })
-menu.addEventListener("mouseleave", function () {
+menuBox.addEventListener("mouseleave", function () {
     menu.style.left = "-25px"
+    menu.style.transform = "translateY(0)"
+    menu.style.padding = "0"
+
 })
 
 // Darkmode toggle
