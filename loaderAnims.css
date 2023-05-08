@@ -62,14 +62,24 @@ body {
     transform: translateY(0);
 }
 
-#homeIcon {
+.icon {
     display: none;
     fill: #d0d0dc;
-    width: 90%;
     opacity: 0;
     transition: opacity 0.5s;
     position: absolute;
-    top: 20px;
+    cursor: pointer;
+}
+
+#homeIcon {
+    width: 80%;
+    top: 30px;
+}
+
+#settingsIcon {
+    width: 37px;
+    top: 110px;
+    left: 8.5px;
 }
 
 #menuIcon {
@@ -80,6 +90,16 @@ body {
     width: 100%;
     aspect-ratio: 1.3/1;
     border-radius: 100%;
+}
+
+#accountIcon {
+    width: 40px;
+    bottom: 110px;
+}
+
+#aboutIcon {
+    width: 35px;
+    bottom: 30px;
 }
 
 .line {

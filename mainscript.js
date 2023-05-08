@@ -2,6 +2,9 @@
 var menuBox = document.getElementById("menuBox")
 var menu = document.getElementById("menu")
 var homeIcon = document.getElementById("homeIcon")
+var settingsIcon = document.getElementById("settingsIcon")
+var accountIcon = document.getElementById("accountIcon")
+var aboutIcon = document.getElementById("aboutIcon")
 
 function menuTransform () {
     menu.style.left = "2vw"
@@ -10,8 +13,14 @@ function menuTransform () {
     menuBox.style.aspectRatio = "1/3.5"
     menuBox.style.top = "14vh"
     homeIcon.style.display = "block"
+    settingsIcon.style.display = "block"
+    aboutIcon.style.display = "block"
+    accountIcon.style.display = "block"
     setTimeout(() => {
         homeIcon.style.opacity = 1
+        settingsIcon.style.opacity = 1
+        aboutIcon.style.opacity = 1
+        accountIcon.style.opacity = 1
         setTimeout(() => {
             menu.removeEventListener("mouseenter", menuTransform)
             menuBox.addEventListener("mouseleave", menuRevert)
@@ -21,11 +30,17 @@ function menuTransform () {
 
 function menuRevert () {
     homeIcon.style.opacity = 0
+    settingsIcon.style.opacity = 0
+    aboutIcon.style.opacity = 0
+    accountIcon.style.opacity = 0
     setTimeout(() => {
         menu.style.left = "-25px"
         menu.style.transform = "translateY(0)"
         menu.style.padding = "0"
         homeIcon.style.display = "none"
+        settingsIcon.style.display = "none"
+        aboutIcon.style.display = "none"
+        accountIcon.style.display = "none"
         setTimeout(() => {
             menuBox.removeEventListener("mouseleave", menuRevert)
             menu.addEventListener("mouseenter", menuTransform)
