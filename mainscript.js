@@ -1,20 +1,39 @@
 //Menu interactions
 var menuBox = document.getElementById("menuBox")
 var menu = document.getElementById("menu")
+var homeIcon = document.getElementById("homeIcon")
 
-menu.addEventListener("mouseenter", function () {
+function menuTransform () {
     menu.style.left = "2vw"
     menu.style.transform = "translateY(-150px)"
     menu.style.padding = "150px 0 150px 0"
     menuBox.style.aspectRatio = "1/3.5"
     menuBox.style.top = "14vh"
-})
-menuBox.addEventListener("mouseleave", function () {
-    menu.style.left = "-25px"
-    menu.style.transform = "translateY(0)"
-    menu.style.padding = "0"
+    homeIcon.style.display = "block"
+    setTimeout(() => {
+        homeIcon.style.opacity = 1
+        setTimeout(() => {
+            menu.removeEventListener("mouseenter", menuTransform)
+            menuBox.addEventListener("mouseleave", menuRevert)
+        }, 500)
+    }, 500)
+}
 
-})
+function menuRevert () {
+    homeIcon.style.opacity = 0
+    setTimeout(() => {
+        menu.style.left = "-25px"
+        menu.style.transform = "translateY(0)"
+        menu.style.padding = "0"
+        homeIcon.style.display = "none"
+        setTimeout(() => {
+            menuBox.removeEventListener("mouseleave", menuRevert)
+            menu.addEventListener("mouseenter", menuTransform)
+        }, 500)
+    }, 500)
+}
+
+menu.addEventListener("mouseenter", menuTransform)
 
 // Darkmode toggle
 var root = document.querySelector(":root")
