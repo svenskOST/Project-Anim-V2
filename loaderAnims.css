@@ -17,13 +17,22 @@
 * {
     margin: 0;
     transition: background-color 1s, box-shadow 1s;
-    
 }
 
 body {
     background-color: var(--base-color);
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Titillium Web';
+    font-size: 22pt;
+}
+
+p {
+    font-family: 'Titillium Web';
+    font-size: 15pt;
 }
 
 #logo {
@@ -84,7 +93,7 @@ body {
 }
 
 #settingsMenu {
-    width: 400%;
+    width: 200px;
     height: 100%;
     background: purple;
     left: 170%;
@@ -94,10 +103,28 @@ body {
     border-radius: 30px;
     opacity: 0;
     transition: opacity 0.5s, box-shadow 1s;
+    color: #d0d0dc;
+}
+
+#settingsTitle {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.settingsP {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+#settingsP1 {
+    top: 85px;
 }
 
 #modeToggle {
-    top: 10%;
+    top: 32%;
     background-color: var(--main-color);
     box-shadow: 5px 5px 5px var(--menuShadow-color);
     cursor: pointer;
@@ -129,6 +156,10 @@ body {
     border-radius: 20px;
     opacity: 1;
     transition: opacity 1s;
+}
+
+#settingsP2 {
+    top: 210px;
 }
 
 #menuIcon {
