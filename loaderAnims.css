@@ -11,6 +11,7 @@
     --base-color: #212121;
     --main-color: #3a3a3a;
     --shadow-color: rgba(0, 0, 0, 0.5);
+    --menuShadow-color: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -73,51 +74,37 @@ body {
 
 #homeIcon {
     width: 80%;
-    top: 30px;
+    top: 8%;
 }
 
 #settingsIcon {
-    width: 37px;
-    top: 110px;
-    left: 8.5px;
+    width: 75%;
+    top: 27.5%;
+    left: 16.5%;
 }
 
-#menuIcon {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    aspect-ratio: 1.3/1;
-    border-radius: 100%;
-}
-
-#accountIcon {
-    width: 40px;
-    bottom: 110px;
-}
-
-#aboutIcon {
-    width: 35px;
-    bottom: 30px;
-}
-
-.line {
-    background: #d0d0dc;
-    border-radius: 4px;
-    width: 60%;
-    aspect-ratio: 6/1;
+#settingsMenu {
+    width: 400%;
+    height: 100%;
+    background: purple;
+    left: 170%;
+    position: absolute;
+    display: none;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.5s, box-shadow 1s;
 }
 
 #modeToggle {
-    top: 80px;
+    top: 10%;
     background-color: var(--main-color);
-    box-shadow: 5px 5px 5px var(--shadow-color);
+    box-shadow: 5px 5px 5px var(--menuShadow-color);
     cursor: pointer;
-    width: 150px;
-    height: 70px;
+    width: 55%;
+    height: 12%;
     border-radius: 50px;
-    right: 130px;
+    left: 21.5%;
     position: absolute;
 }
 
@@ -142,6 +129,36 @@ body {
     border-radius: 20px;
     opacity: 1;
     transition: opacity 1s;
+}
+
+#menuIcon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 1.3/1;
+    border-radius: 100%;
+}
+
+#accountIcon {
+    stroke: #d0d0dc;
+    stroke-width: 0.5;
+    width: 80%;
+    bottom: 27.5%;
+    left: 10%;
+}
+
+#aboutIcon {
+    width: 68%;
+    bottom: 10%;
+}
+
+.line {
+    background: #d0d0dc;
+    border-radius: 4px;
+    width: 60%;
+    aspect-ratio: 6/1;
 }
 
 #mainContent {
