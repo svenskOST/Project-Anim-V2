@@ -212,12 +212,18 @@ p {
     box-shadow: 10px 10px 20px var(--shadow-color);
 }
 
+embed {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
 @media only screen and (max-width: 1500px) {
     .anim {
         margin: 50px;
     }
 
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 780px) {
         #logo {
             width: 70%;
             left: 15%;
