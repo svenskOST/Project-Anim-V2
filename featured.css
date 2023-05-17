@@ -47,7 +47,8 @@ p {
     max-width: 150px;
     aspect-ratio: 1/1.2;
     top: calc(50vh - 85px);
-    left: -35px;
+    /*changed to -25px from -35px to fix menu disappearing before mouse enters submenu on big screen PC (1080p no scaling)*/
+    left: -25px;
     z-index: 2;
 }
 
