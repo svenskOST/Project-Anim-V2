@@ -88,10 +88,12 @@ var baseDark = "#212121"
 var mainDark = "#3a3a3a"
 var shadowDark = "rgba(0, 0, 0, 0.5)"
 var menuShadowDark = "rgba(0, 0, 0, 0.5)"
+var textDark = "#d0d0dc"
 var baseLight = "#d0d0dc"
 var mainLight = "#b0b0bb"
 var shadowLight = "rgba(118, 118, 118, 0.7)"
 var menuShadowLight = "rgba(50, 48, 48, 0.5)"
+var textLight = "#212121"
 
 mode.addEventListener("click", function () {
     if (isDark) {
@@ -99,6 +101,7 @@ mode.addEventListener("click", function () {
         root.style.setProperty("--main-color", mainLight)
         root.style.setProperty("--shadow-color", shadowLight)
         root.style.setProperty("--menuShadow-color", menuShadowLight)
+        root.style.setProperty("--text-color", textLight)
         icon.style.backgroundColor = "yellow"
         icon.style.left = "calc(90% - " + icon.clientWidth + "px)"
         icon.style.boxShadow = "0 0 10px yellow"
@@ -110,6 +113,7 @@ mode.addEventListener("click", function () {
         root.style.setProperty("--main-color", mainDark)
         root.style.setProperty("--shadow-color", shadowDark)
         root.style.setProperty("--menuShadow-color", menuShadowDark)
+        root.style.setProperty("--text-color", textDark)
         icon.style.backgroundColor = "var(--main-color)"
         icon.style.left = "10%"
         icon.style.boxShadow = "0 0 10px grey"
