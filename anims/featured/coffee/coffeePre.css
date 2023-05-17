@@ -4,22 +4,29 @@
 }
 
 body {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    top: 50px;
+    width: 50%;
+    aspect-ratio: 4/5;
+    top: -5%;
 }
 
 .cup {
-    position: relative;
-    width: 280px;
-    height: 300px;
+    position: absolute;
+    width: 87.5%;
+    height: 75%;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
@@ -29,8 +36,8 @@ body {
 .top {
     position: absolute;
     width: 100%;
-    height: 60px;
-    top: -30px;
+    height: 20%;
+    top: -10%;
     left: 0;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-radius: 50%;
@@ -38,10 +45,10 @@ body {
 
 .circle {
     position: absolute;
-    top: 5px;
-    left: 10px;
-    width: calc(100% - 20px);
-    height: 50px;
+    top: 10%;
+    left: 4%;
+    width: 92%;
+    height: 80%;
     background: linear-gradient(to left, #f9f9f9, #d9d9d9);
     border-radius: 50%;
     overflow: hidden;
@@ -49,9 +56,9 @@ body {
 
 .coffee {
     position: absolute;
-    top: 20px;
+    top: 40%;
     left: 0;
-    width: 100%;
+    width:   100%;
     height: 100%;
     background: linear-gradient(#c57e65, #e28462);
     border-radius: 50%;
@@ -59,13 +66,13 @@ body {
 
 .handle {
     position: absolute;
-    width: 140px;
-    height: 120px;
-    top: 50px;
-    right: -90px;
-    border: 25px solid #cecece;
-    border-top: 25px solid transparent;
-    border-left: 45px solid transparent;
+    width: 50%;
+    height: 40%;
+    top: 17%;
+    right: -34%;
+    border: 20px solid #cecece;
+    border-top: 20px solid transparent;
+    border-left: 35px solid transparent;
     border-radius: 50%;
     transform: rotate(-45deg);
     box-shadow: inset 100px 145px -145px rgba(0, 0, 0, 0.2);
@@ -73,11 +80,11 @@ body {
 
 .plate {
     position: absolute;
-    bottom: -50px;
+    bottom: -4%;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
-    height: 200px;
+    width: 170%;
+    height: 50%;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-radius: 50%;
     box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
@@ -86,10 +93,10 @@ body {
 .plate::before {
     content: '';
     position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    top: 3%;
+    bottom: 5%;
+    left: 2%;
+    right: 2%;
     border-radius: 50%;
     background: linear-gradient(to left, #f9f9f9, #e7e7e7);
 }
@@ -97,10 +104,10 @@ body {
 .plate::after {
     content: '';
     position: absolute;
-    top: 30px;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
+    top: 15%;
+    bottom: 15%;
+    left: 10%;
+    right: 10%;
     border-radius: 50%;
     background: radial-gradient(rgba(0, 0, 0, 0.3) 25%, transparent, transparent);
 }
@@ -109,21 +116,21 @@ body {
     position: relative;
     display: flex;
     z-index: 1;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 
 .smoke span {
     position: relative;
-    bottom: 50px;
+    bottom: 5px;
     display: block;
-    margin: 0 2px 50px;
-    min-width: 8px;
-    height: 120px;
+    margin: 0 2px 10px;
+    min-width: 2%;
+    height: 100px;
     background: #fff;
     border-radius: 50%;
     animation: animate 5s linear infinite;
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(7px);
     animation-delay: calc(var(--i) * -0.5s);
 }
 
