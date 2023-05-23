@@ -1,1 +1,1 @@
-- Fix handle on coffee cup when anim container is resized and gets smaller. Do it with javascript, CSS doesn't support % values on border properties.
+DONE Fix handle on coffee cup when anim container is resized and gets smaller. Do it with javascript, CSS doesn't support % values on border properties.
