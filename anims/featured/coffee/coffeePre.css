@@ -64,18 +64,16 @@ body {
     border-radius: 50%;
 }
 
-.handle {
+#handle {
     position: absolute;
     width: 50%;
     height: 40%;
     top: 17%;
     right: -34%;
-    border: 20px solid #cecece;
-    border-top: 20px solid transparent;
-    border-left: 35px solid transparent;
     border-radius: 50%;
     transform: rotate(-45deg);
     box-shadow: inset 100px 145px -145px rgba(0, 0, 0, 0.2);
+    font-size: 125%;
 }
 
 .plate {
