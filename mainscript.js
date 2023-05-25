@@ -128,11 +128,11 @@ var anims = document.getElementsByClassName("anim")
 
 for (let i = 0; i < anims.length; i++) {
     anims[i].addEventListener("mouseenter", function () {
-        anims[i].style.scale = "1.25"
+        anims[i].style.scale = "1.2"
 
         for (let y = 0; y < anims.length; y++) {
             if (y != i) {
-                anims[y].style.filter = "blur(4px)"
+                anims[y].style.filter = "blur(3px)"
             }
         }
     })

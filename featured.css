@@ -200,11 +200,11 @@ p {
     position: absolute;
     left: 10vw;
     width: 80vw;
-    top: 170px;
+    top: 200px;
 }
 
 .anim {
-    margin: 100px;
+    margin: 50px;
     width: 400px;
     min-width: 300px;
     aspect-ratio: 4/5;
