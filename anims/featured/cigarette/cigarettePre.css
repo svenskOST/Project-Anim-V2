@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .cigarette {
+    transform-style: preserve-3d;
+    animation: animate 30s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateX(180deg) rotateY(80deg) rotateZ(460deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+.container .cigarette span {
+    position: absolute;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.76em;
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 36deg)) translateZ(23.5px);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.container .cigarette span i {
+    font-style: normal;
+    color: #ec9535;
+}
+
+.container .cigarette span i:first-child:after {
+    content: "L";
+    color: #ccc;
+    text-transform: lowercase;
+}
+
+.container .cigarette span i:last-child {
+    text-transform: lowercase;
+    color: #f00;
+    filter: blur(2px);
+    text-shadow: -4px 0 2px #494646,
+        8px 0 20px #f00,
+        8px 0 24px #f00,
+        8px 0 0 #545353,
+        12px 0 #555,
+        16px 0 #666,
+        20px 0 #888,
+        24px 0 #999;
+}
+
+@media only screen and (max-width: 390px) {
+    .container .cigarette span {
+        font-size: 0.9em;
+        line-height: 0.5em;
+        transform: translate(-50%, -50%) rotateX(calc(var(--i) * 36deg)) translateZ(18.5px);
+    }
+}

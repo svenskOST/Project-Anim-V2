@@ -56,8 +56,7 @@ p {
     position: fixed;
     background: purple;
     border-radius: 40px;
-    width: 8vw;
-    max-width: 50px;
+    width: 50px;
     aspect-ratio: 1/2;
     top: calc(50vh - 50px);
     left: -25px;

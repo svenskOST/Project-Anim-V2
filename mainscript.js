@@ -7,8 +7,8 @@ var accountIcon = document.getElementById("accountIcon")
 var aboutIcon = document.getElementById("aboutIcon")
 
 function MenuTransform () {
-    menu.style.left = "2vw"
-    menu.style.transform = "translateY(-150px)"
+    menu.style.left = "2.5vw"
+    menu.style.transform = "translateY(-145px)"
     menu.style.padding = "150px 0 150px 0"
     menuBox.style.aspectRatio = "1/3.5"
     menuBox.style.top = "14vh"
